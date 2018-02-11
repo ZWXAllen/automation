@@ -155,13 +155,13 @@ def gen_mas(findViewById, view, fileType):
         if secondItem:
             v_parent = 'self'
             if findViewById(secondItem):
-                result += '\t' + 'make.' + firstAttribute+ '.mas_'+relation +'(' + v_parent +'.' + findViewById(secondItem) + '.' + secondAttribute + ')' + '.offset(' + constant + ')'
+                result += '\t' + 'make.' + firstAttribute+ '.mas_'+relation +'(' + v_parent +'.' + findViewById(secondItem) + '.' + secondAttribute + ')' + '.offset(' + constant + ');'
             else:
-                result += '\t' + 'make.' + firstAttribute + '.mas_'+relation+'(' + v_parent + ')' + '.offset(' + constant + ')'
+                result += '\t' + 'make.' + firstAttribute + '.mas_'+relation+'(' + v_parent + ')' + '.offset(' + constant + ');'
         else:
-            result += '\t' + 'make.' + firstAttribute + ".mas_"+relation+"(" + constant + ")"
+            result += '\t' + 'make.' + firstAttribute + ".mas_"+relation+"(" + constant + ");"
         if multiplier:
-            result += '.multipliedBy('+str(multiplier)+')'
+            result += '.multipliedBy('+str(multiplier)+');'
         result+='\n'
 
     result += '\n' + "}];\n"
