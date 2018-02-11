@@ -10,11 +10,11 @@ workflow，目前可以支持Python，Ruby，shell等，
 ```
 
 ## 项目地址
-https://github.com/liubobo/automation.git
+https://github.com/ZWXAllen/automation.git
 
 ## 安装方式
 ``` bash
-git clone https://github.com/liubobo/automation.git
+git clone https://github.com/ZWXAllen/automation.git
 cd automation/project && sudo python setup.py develop
 点击安装Services下的workflow
 ```
